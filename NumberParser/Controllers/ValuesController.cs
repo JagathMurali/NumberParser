@@ -13,6 +13,11 @@ namespace NumberParser.Controllers
             _helper = wordHelper;
         }
 
+        public string get()
+        {
+            return "Value";
+        }
+
         // POST api/values
         [HttpPost]
         public Consumer SubmitValues(Consumer consumer)

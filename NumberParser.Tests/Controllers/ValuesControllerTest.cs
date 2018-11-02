@@ -34,8 +34,8 @@ namespace NumberParser.Tests.Controllers
             var result = controller.SubmitValues(userData);
 
             // Assert
-            Assert.AreEqual(result.Name, userData.Name);
-            Assert.AreEqual(result.NumberInWords, numberInWord);
+            Assert.AreEqual(userData.Name, result.Name);
+            Assert.AreEqual(numberInWord, result.NumberInWords);
         }
 
         [TestMethod]
@@ -53,8 +53,8 @@ namespace NumberParser.Tests.Controllers
             var result = controller.SubmitValues(userData);
 
             // Assert
-            Assert.AreEqual(result.Name, userData.Name);
-            Assert.AreEqual(result.NumberInWords, numberInWord);
+            Assert.AreEqual(userData.Name, result.Name);
+            Assert.AreEqual(numberInWord, result.NumberInWords);
         }
 
         [TestMethod]
@@ -73,8 +73,8 @@ namespace NumberParser.Tests.Controllers
             var result = controller.SubmitValues(userData);
 
             // Assert
-            Assert.AreEqual(result.Name, userData.Name);
-            Assert.AreEqual(result.NumberInWords, numberInWord);
+            Assert.AreEqual(userData.Name, result.Name);
+            Assert.AreEqual(numberInWord, result.NumberInWords);
         }
     }
 }
