@@ -1,0 +1,29 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/ScriptLibrary/home.js"></script>
+    <title></title>
+</head>
+<body>
+    <div>
+
+        <label> Name</label>
+        <input type="text" name="name" id="Name" placeholder="Enter your name" />
+        <label> Amount</label>
+        <input type="number" name="amount" id="Amount" placeholder="Enter amount" />
+        <input type="submit" onclick="submitData()" />
+        <p></p>
+        <div>Hi <label id="NameText"></label>, the amount that you have entered is <label id="AmountText"></label></div>
+        
+    </div>
+</body>
+
+</html>
