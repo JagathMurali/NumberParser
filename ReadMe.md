@@ -1,4 +1,4 @@
-### Number Parser
+# Number Parser
 
 ## Application Specification
 
@@ -23,12 +23,12 @@ Moq
 ## Structure of application
     Both front and webservice are part of one project. 
 
-# Front end application
+### Front end application
     Html page is loaded using Asp.net MVC controller. All the controls including button is pure html controls. 
 
     The submit request is an ajax call using jquery. The result of the application is also handled using jquery.
 
-# Webservice application
+### Webservice application
     Webservice application is an Asp.Net WebApi project with one controller which accept the model which have name and number. 
     
     The response of the post call, is the model itself with translated string as a property.
