@@ -52,5 +52,35 @@ namespace NumberParser.Tests.ServiceClass
             Assert.AreEqual(numberInWord, result);
         }
 
+        [TestMethod]
+        public void CheckWhetherTheFunctionReturnZero()
+        {
+            // Arrange
+            NumberToWordsService numberService = new NumberToWordsService();
+            double value = 0.00;
+            string numberInWord = "ZERO DOLLARS";
+
+            // Act
+            string result = numberService.ConvertNumberToString(value);
+
+            // Assert
+            Assert.AreEqual(numberInWord, result);
+        }
+
+        [TestMethod]
+        public void CheckWhetherTheFunctionReturnNegativeNumber()
+        {
+            // Arrange
+            NumberToWordsService numberService = new NumberToWordsService();
+            double value = -123.45;
+            string numberInWord = "NEGATIVE";
+
+            // Act
+            string result = numberService.ConvertNumberToString(value);
+
+            // Assert
+            Assert.AreEqual(numberInWord, result);
+        }
+
     }
 }

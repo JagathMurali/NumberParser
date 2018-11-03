@@ -10,18 +10,25 @@
     <meta name="viewport" content="width=device-width" />
     <script src="~/Scripts/jquery-3.3.1.js"></script>
     <script src="~/ScriptLibrary/home.js"></script>
+    <link href="~/Content/custom.css" rel="stylesheet"/>
     <title>Code Test</title>
 </head>
 <body>
-    <div>
-        <label>Name</label>
-        <input type="text" name="name" id="Name" placeholder="Enter your name" />
-        <label> Amount</label>
-        <input type="number" name="amount" id="Amount" placeholder="Enter amount" />
-        <input type="submit" onclick="submitData()" />
-        <p></p>
+    <div class="input-container">
+        <div class="input-controls">
+            <label>Name</label>
+            <input type="text" name="name" id="Name" placeholder="Enter your name" />
+        </div>
+        <div  class="input-controls">
+            <label> Amount</label>
+            <input type="number" name="amount" id="Amount" placeholder="Enter amount" />
+        </div>
+        <div  class="input-controls">
+            <input type="submit" onclick="submitData()" />
+        </div>
+    </div>
+    <div class="output-container">
         <div>Hi <label id="NameText"></label>, the amount that you have entered is <b><label id="AmountText"></label></b></div>
-        
     </div>
 </body>
 

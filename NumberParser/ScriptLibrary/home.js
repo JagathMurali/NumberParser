@@ -11,8 +11,10 @@
         success: function (data) {
             var name = data.Name;
             var numberText = data.NumberInWords;
+            $(".output-container").addClass("display-message");
             $("#NameText").html(name);
             $("#AmountText").html(numberText);
+
         },
         error: function () {
             alert("Ajax call failed");

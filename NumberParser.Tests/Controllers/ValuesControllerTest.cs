@@ -26,7 +26,7 @@ namespace NumberParser.Tests.Controllers
             Mock<INumberToWordsService> mockService = new Mock<INumberToWordsService>();            
             mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<double>())).Returns(numberInWord);
             ValuesController controller = new ValuesController(mockService.Object);
-            Consumer userData = new Consumer();
+            UserDetails userData = new UserDetails();
             userData.Name = "John Smith";
             userData.Number = "123.45";
 
@@ -45,7 +45,7 @@ namespace NumberParser.Tests.Controllers
             string numberInWord = "INCORRECT";
             Mock<INumberToWordsService> mockService = new Mock<INumberToWordsService>();           
             ValuesController controller = new ValuesController(mockService.Object);
-            Consumer userData = new Consumer();
+            UserDetails userData = new UserDetails();
             userData.Name = "John Smith";
             userData.Number = "123.45.5";
 
@@ -61,11 +61,11 @@ namespace NumberParser.Tests.Controllers
         public void CheckingWhetherExpectionIsHappenedForInAppropriateData()
         {
             // Arrange
-            string numberInWord = " NOT PROCESSED.";
+            string numberInWord = "NOT PROCESSED.";
             Mock<INumberToWordsService> mockService = new Mock<INumberToWordsService>();
             ValuesController controller = new ValuesController(mockService.Object);
             mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<double>())).Throws(new Exception());
-            Consumer userData = new Consumer();
+            UserDetails userData = new UserDetails();
             userData.Name = "John Smith";
             userData.Number = "123.34";
 

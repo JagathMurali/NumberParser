@@ -11,38 +11,35 @@ namespace NumberParser.Controllers
         public ValuesController(INumberToWordsService wordHelper)
         {
             _helper = wordHelper;
-        }
+        }        
 
-        public string get()
-        {
-            return "Value";
-        }
-
-        // POST api/values
+        /// <summary>
+        /// Post call where submitted values will be in UserDetails
+        /// </summary>
+        /// <param name="consumer">Submitted model</param>
+        /// <returns>Returns the model with parsered value</returns>
         [HttpPost]
-        public Consumer SubmitValues(Consumer consumer)
+        public UserDetails SubmitValues(UserDetails consumer)
         {
             try
-            {
-
-                if(true)
+            {         
+                // Checking whether the numebr passed is valid number
+                bool isParsingSucess = double.TryParse(consumer.Number, out double number);
+                if (isParsingSucess)
                 {
-                    bool isparsingSucess = double.TryParse(consumer.Number, out double number);
-                    if (isparsingSucess)
-                    {
-                        consumer.NumberInWords = _helper.ConvertNumberToString(number);
-                        consumer.IsSuccess = true;
-                    } else
-                    {
-                        consumer.NumberInWords = " INCORRECT";
-                    }
-
-                    return consumer;
+                    consumer.NumberInWords = _helper.ConvertNumberToString(number);
+                } else
+                {
+                    // Error message when invalid number is entered
+                    consumer.NumberInWords = "INCORRECT";                     
                 }
+
+                return consumer;                
             }
             catch (Exception ex)
             {
-                consumer.NumberInWords = " NOT PROCESSED.";
+                // Error message when there is an exception
+                consumer.NumberInWords = "NOT PROCESSED.";
                 return consumer;
             }            
         }

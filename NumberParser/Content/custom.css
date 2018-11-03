@@ -1,0 +1,17 @@
+﻿.input-container {
+    margin: 30px;
+    display: block;
+}
+
+.output-container {
+    display: block;
+    visibility: hidden;
+}
+
+.display-message {
+    margin: 30px;
+    visibility: visible;
+}
+.input-controls {
+    margin-bottom: 10px;
+}
