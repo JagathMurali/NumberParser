@@ -31,6 +31,5 @@ Moq
     2) Copying constant values to separate file or config file
     3) Automation test cases
     4) Can use Asp.net core to get application develop as well as setup on any OS
-    5) Better UI presentation
 
 # 
