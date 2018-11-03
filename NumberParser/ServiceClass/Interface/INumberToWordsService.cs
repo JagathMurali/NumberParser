@@ -2,6 +2,6 @@
 {
     public interface INumberToWordsService
     {
-        string ConvertNumberToString(double doubleNumber);
+        string ConvertNumberToString(decimal doubleNumber);
     }
 }

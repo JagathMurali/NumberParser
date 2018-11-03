@@ -24,7 +24,7 @@ namespace NumberParser.Controllers
             try
             {         
                 // Checking whether the numebr passed is valid number
-                bool isParsingSucess = double.TryParse(consumer.Number, out double number);
+                bool isParsingSucess = decimal.TryParse(consumer.Number, out decimal number);
                 if (isParsingSucess)
                 {
                     consumer.NumberInWords = _helper.ConvertNumberToString(number);

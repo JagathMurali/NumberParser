@@ -12,7 +12,7 @@ namespace NumberParser.Tests.ServiceClass
         {
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
-            double value = 123.45;
+            decimal value = 123.45M;
             string numberInWord = "ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS";
 
             // Act
@@ -27,7 +27,7 @@ namespace NumberParser.Tests.ServiceClass
         {
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
-            double value = 0.45;
+            decimal value = 0.45M;
             string numberInWord = "ZERO DOLLARS AND FORTY-FIVE CENTS";
 
             // Act
@@ -42,7 +42,7 @@ namespace NumberParser.Tests.ServiceClass
         {
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
-            double value = 123.00;
+            decimal value = 123.00M;
             string numberInWord = "ONE HUNDRED AND TWENTY-THREE DOLLARS";
 
             // Act
@@ -57,7 +57,7 @@ namespace NumberParser.Tests.ServiceClass
         {
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
-            double value = 0.00;
+            decimal value = 0.00M;
             string numberInWord = "ZERO DOLLARS";
 
             // Act
@@ -72,7 +72,7 @@ namespace NumberParser.Tests.ServiceClass
         {
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
-            double value = -123.45;
+            decimal value = -123.45M;
             string numberInWord = "NEGATIVE";
 
             // Act

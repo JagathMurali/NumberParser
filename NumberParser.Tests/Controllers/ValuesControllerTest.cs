@@ -24,7 +24,7 @@ namespace NumberParser.Tests.Controllers
             // Arrange
             string numberInWord = "ONE HUNDRED AND TWENTY-THREE DOLLARS AND FORTY-FIVE CENTS";
             Mock<INumberToWordsService> mockService = new Mock<INumberToWordsService>();            
-            mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<double>())).Returns(numberInWord);
+            mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<decimal>())).Returns(numberInWord);
             ValuesController controller = new ValuesController(mockService.Object);
             UserDetails userData = new UserDetails();
             userData.Name = "John Smith";
@@ -64,7 +64,7 @@ namespace NumberParser.Tests.Controllers
             string numberInWord = "NOT PROCESSED.";
             Mock<INumberToWordsService> mockService = new Mock<INumberToWordsService>();
             ValuesController controller = new ValuesController(mockService.Object);
-            mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<double>())).Throws(new Exception());
+            mockService.Setup(mock => mock.ConvertNumberToString(It.IsAny<decimal>())).Throws(new Exception());
             UserDetails userData = new UserDetails();
             userData.Name = "John Smith";
             userData.Number = "123.34";

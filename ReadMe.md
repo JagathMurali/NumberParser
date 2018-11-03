@@ -33,6 +33,8 @@ Moq
     
     The response of the post call, is the model itself with translated string as a property.
 
+    Decimal as the type of the number as double have precision issues.
+
 ## Area of Improvements
     1) Proper Error logging
     2) Copying constant values to separate file or config file

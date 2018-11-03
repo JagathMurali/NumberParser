@@ -10,25 +10,25 @@ namespace NumberParser.ServiceClass
         /// </summary>
         /// <param name="doubleNumber">Passed number</param>
         /// <returns>Return the parsed string</returns>
-        public string ConvertNumberToString(double doubleNumber)
+        public string ConvertNumberToString(decimal originalNumber)
         {
             // Negative Number not handling now
-            if (doubleNumber < 0)
+            if (originalNumber < 0)
                 return "NEGATIVE";
 
             // Getting integer part of the amount
-            int amountInDollars = (int)Math.Floor(doubleNumber);
+            int amountInDollars = (int)Math.Floor(originalNumber);
             // Getting decimal part of the amount
-            int amountInCents = (int)((doubleNumber - amountInDollars) * 100);
+            decimal amountInCents = (decimal) ((originalNumber - amountInDollars) * 100);
 
             // Getting string of integer part  
-            string amountInDollarsString = ConvertNumberToString(amountInDollars);
+            string amountInDollarsString = ConvertNumberToString((int)amountInDollars);
             amountInDollarsString += " DOLLARS";
             // Checking whether the decimal part is present before processing
             if (amountInCents != 0)
             {
                 // Getting string of decimal part  
-                string amountInCentsString = TwoDigitNumberToString(amountInCents);
+                string amountInCentsString = TwoDigitNumberToString((int)amountInCents);
                 amountInCentsString += " CENTS";    
                 amountInDollarsString += $" AND {amountInCentsString}";
             }
