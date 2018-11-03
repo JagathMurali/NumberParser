@@ -14,7 +14,7 @@ namespace NumberParser.ServiceClass
         {
             // Negative Number not handling now
             if (originalNumber < 0)
-                return "NEGATIVE";
+                return "NEGATIVE VALUE";
 
             // Getting integer part of the amount
             int amountInDollars = (int)Math.Floor(originalNumber);
