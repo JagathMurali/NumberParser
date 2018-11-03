@@ -73,7 +73,7 @@ namespace NumberParser.Tests.ServiceClass
             // Arrange
             NumberToWordsService numberService = new NumberToWordsService();
             decimal value = -123.45M;
-            string numberInWord = "NEGATIVE";
+            string numberInWord = "NEGATIVE VALUE";
 
             // Act
             string result = numberService.ConvertNumberToString(value);
